@@ -1,5 +1,6 @@
 % Colouring Australia using nc colours
-int: nc = 3;
+int: nc;
+nc = 3;
 
 var 1..nc: wa;   var 1..nc: nt;  var 1..nc: sa;   var 1..nc: q;
 var 1..nc: nsw;  var 1..nc: v;   var 1..nc: t;
@@ -15,7 +16,7 @@ constraint q != nsw;
 constraint nsw != v;
 solve satisfy;
 
-output ["wa=", show(wa), "\t nt=", show(nt), 
-        "\t sa=", show(sa), "\n", "q=", show(q),  
+output ["wa=", show(wa), "\t nt=", show(nt),
+        "\t sa=", show(sa), "\n", "q=", show(q),
         "\t nsw=", show(nsw), "\t v=", show(v), "\n",
          "t=", show(t),  "\n"];

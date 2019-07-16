@@ -27,6 +27,6 @@ constraint forall (h in HOUR)
 
 solve minimize sum(expenses);
 
-output ["choice = \(choice)\n",
-        "temp = \(temp)\n",
-        "cost = \(sum(expenses))\n"];
+output ["choice = ", show(choice), "\n",
+        "temp = ", show(temp), "\n",
+        "cost = ", show(sum(expenses)), "\n"];
